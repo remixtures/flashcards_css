@@ -1,0 +1,92 @@
+body {
+    position: relative;
+    margin: 0;
+    background: url("images/world.png") no-repeat;
+    background-size: cover;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+#cardArea {
+    background-color: rgb(235, 240, 245);
+    border: 2px mintcream solid;
+    border-radius: 15px;
+    width: 80%;
+    position: relative;
+    margin: 5% auto;
+    opacity: 95%;
+    box-shadow: 3px 3px 5px gray;
+}
+
+#cardArea h1{
+    background-color: wheat;
+    box-shadow: 3px 3px 5px gray;
+    text-align: center;
+    color: rgb(135, 44, 98);
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%;
+    margin: 5% auto;
+}
+
+.cards {
+    position: relative;
+    display: grid;
+}
+
+.container:hover .country{
+    transform: rotateY(180deg);
+}
+
+#cards {
+    position: relative;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    margin: 5% auto;
+}
+
+
+#cards div p {
+    margin: 0px 20px;
+    text-align: center;
+}
+
+.country {
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    font-size: 28px;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    opacity: 100%;
+}
+
+.country div {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow: 3px 3px 5px gray;
+}
+
+.front {
+    z-index: 2;
+    backface-visibility: hidden;
+    color: rgb(135, 44, 98);
+    background-color: wheat;
+}
+
+.back {
+    z-index: 1;
+    transform: rotateY(180deg);
+    color: wheat;
+    background-color: rgb(135, 44, 98);
+}
+
+.container {
+    perspective: 900px;
+}
